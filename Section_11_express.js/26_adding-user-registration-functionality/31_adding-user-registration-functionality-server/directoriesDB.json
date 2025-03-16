@@ -1,0 +1,20 @@
+[
+    {
+        "id": "47f24c0c-59d0-4fbc-80dc-2c0cab3a7ef6",
+        "name": "root-anurag@gmail.com",
+        "userId": "c9174f25-c5d0-48df-bf3b-736f3f539f78",
+        "parentDirId": null,
+        "files": [
+            "6641aa51-1f8e-4d1e-81f0-8e3693babcdf"
+        ],
+        "directories": []
+    },
+    {
+        "id": "6e65941c-9965-4795-a121-d72b8d437a1d",
+        "name": "root-anurags@gmail.com",
+        "userId": "d069a454-adf3-447b-94f9-0fdc4c09b165",
+        "parentDirId": null,
+        "files": [],
+        "directories": []
+    }
+]

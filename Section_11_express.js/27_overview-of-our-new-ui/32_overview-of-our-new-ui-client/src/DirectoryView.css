@@ -1,0 +1,240 @@
+.directory-view {
+  padding-inline: 10px;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+/* Header */
+.directory-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  padding-block: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: white;
+}
+
+.directory-header h1 {
+  margin: 0;
+  margin-right: 20px;
+  font-size: 2rem;
+  border-radius: 4px;
+}
+
+.header-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-links a {
+  text-decoration: none;
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.primary-button {
+  background-color: #007bff;
+  color: white;
+}
+.primary-button:hover {
+  background-color: #0056b3;
+}
+
+.secondary-button {
+  background-color: #ccc;
+  color: #333;
+}
+.secondary-button:hover {
+  background-color: #999;
+}
+
+/* Icon buttons */
+.icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem; /* icon size */
+  color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button:hover {
+  color: #0056b3;
+}
+
+/* List */
+.directory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.hoverable-row:hover {
+  background-color: #f0f0f0;
+}
+
+.item-left-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+
+  /* so the left side grows to fill row */
+}
+
+.folder-icon {
+  color: #ffa500;
+  font-size: 1.2em;
+}
+
+/* Three-dots trigger on the right side */
+.context-menu-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: auto;
+  color: #2c2c2c;
+  border-radius: 100%;
+  padding: 8px;
+  margin-right: 4px;
+}
+
+.context-menu-trigger:hover {
+  background-color: #dfdfdf;
+}
+
+/* Progress bar */
+.progress-container {
+  background-color: #7c7c7c;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  position: relative;
+  margin-inline: 10px;
+}
+
+.progress-bar {
+  background-color: #007bff;
+  border-radius: 4px;
+  height: 16px;
+}
+
+.progress-value {
+  position: absolute;
+  font-size: 12px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* Context Menu */
+.context-menu {
+  position: fixed; /* so it stays at the assigned coordinates */
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 999;
+  padding: 5px 0;
+}
+
+.context-menu-item {
+  padding: 8px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #333;
+}
+.context-menu-item:hover {
+  background-color: #eee;
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 4px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-input {
+  padding: 12px; /* Better padding */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* No data message */
+.no-data-message {
+  text-align: center;
+  font-style: italic;
+  margin-top: 40px;
+  color: #777;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

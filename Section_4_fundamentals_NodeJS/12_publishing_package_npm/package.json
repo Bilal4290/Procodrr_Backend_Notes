@@ -1,0 +1,6 @@
+{
+  "type":"module",
+  "dependencies": {
+    "num_sum_coder": "^1.0.0"
+  }
+}

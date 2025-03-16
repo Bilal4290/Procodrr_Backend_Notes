@@ -1,0 +1,21 @@
+[
+    {
+        "id": "47f24c0c-59d0-4fbc-80dc-2c0cab3a7ef6",
+        "name": "root-anurag@gmail.com",
+        "userId": "c9174f25-c5d0-48df-bf3b-736f3f539f78",
+        "parentDirId": null,
+        "files": [
+            "6641aa51-1f8e-4d1e-81f0-8e3693babcdf"
+        ],
+        "directories": [
+            "b50f7ceb-77af-42b8-91b8-04e58c691578"
+        ]
+    },
+    {
+        "id": "b50f7ceb-77af-42b8-91b8-04e58c691578",
+        "name": "Testing",
+        "parentDirId": "47f24c0c-59d0-4fbc-80dc-2c0cab3a7ef6",
+        "files": [],
+        "directories": []
+    }
+]

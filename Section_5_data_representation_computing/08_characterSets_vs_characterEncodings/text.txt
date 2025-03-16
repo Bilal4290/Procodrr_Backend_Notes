@@ -1,0 +1,1 @@
+Node.js is a powerful open source run time environment which allows javascript to runs outside of the browser.
