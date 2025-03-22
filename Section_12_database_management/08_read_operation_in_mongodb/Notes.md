@@ -42,11 +42,13 @@
 
     🔹 Key Difference: find() vs findOne():
 
-        Feature	                find()	                        findOne()
-        Returns	                Cursor (multiple docs)	        Single object
-        Multiple Matches?	    Yes, returns all	            No, only first match
-        Memory Usage	        Efficient (streaming)	        Loads entire object into memory
-        If No Match Found?	    Returns an empty cursor	        Returns null
+
+| Feature            | find()                        | findOne()                    |
+|--------------------|-----------------------------|------------------------------|
+| Returns           | Cursor (multiple docs)       | Single object                |
+| Multiple Matches? | Yes, returns all            | No, only first match         |
+| Memory Usage      | Efficient (streaming)       | Loads entire object into memory |
+| If No Match Found?| Returns an empty cursor     | Returns null                 |
 
 
     2️⃣ How to Check Data Type of a Query Result:
@@ -74,13 +76,15 @@
 
     MongoDB provides comparison operators to filter data efficiently.
 
-        Operator	Meaning	                        Example
-        $gt	        Greater than	                { amount: { $gt: 200 } } (amount > 200)
-        $gte	    Greater than or equal to	    { amount: { $gte: 200 } } (amount ≥ 200)
-        $lt	        Less than	                    { age: { $lt: 18 } } (age < 18)
-        $lte	    Less than or equal to	        { age: { $lte: 18 } } (age ≤ 18)
-        $eq	        Equal to	                    { status: { $eq: "active" } }
-        $ne	        Not equal to	                { status: { $ne: "inactive" } }
+
+| Operator | Meaning                      | Example                               |
+|----------|------------------------------|---------------------------------------|
+| $gt      | Greater than                 | `{ amount: { $gt: 200 } }` (amount > 200) |
+| $gte     | Greater than or equal to     | `{ amount: { $gte: 200 } }` (amount ≥ 200) |
+| $lt      | Less than                     | `{ age: { $lt: 18 } }` (age < 18) |
+| $lte     | Less than or equal to         | `{ age: { $lte: 18 } }` (age ≤ 18) |
+| $eq      | Equal to                      | `{ status: { $eq: "active" } }` |
+| $ne      | Not equal to                  | `{ status: { $ne: "inactive" } }` |
 
 
     ✅ 4.1 Greater Than ($gt):
@@ -131,12 +135,14 @@
 
 5️⃣ More Advanced Operators:
 
-    Operator   Meaning	                                   Example
-    $in	       Matches any value in an array	           { age: { $in: [25, 30, 35] } } (age is 25, 30, or 35)
-    $nin	   Matches none of the values in an array { age: { $nin: [18, 21, 30] } } (age is NOT 18, 21, or 30)
-    $exists	   Checks if a field exists	                   { email: { $exists: true } }
-    $type	   Matches by data type	                       { age: { $type: "number" } }
-    $regex	   Pattern matching (similar to LIKE in SQL)m  { name: { $regex: "^A" } } (Names starting with "A")
+
+| Operator | Meaning                                | Example |
+|----------|----------------------------------------|---------|
+| $in      | Matches any value in an array         | `{ age: { $in: [25, 30, 35] } }` (age is 25, 30, or 35) |
+| $nin     | Matches none of the values in an array | `{ age: { $nin: [18, 21, 30] } }` (age is NOT 18, 21, or 30) |
+| $exists  | Checks if a field exists              | `{ email: { $exists: true } }` |
+| $type    | Matches by data type                  | `{ age: { $type: "number" } }` |
+| $regex   | Pattern matching (similar to LIKE in SQL) | `{ name: { $regex: "^A" } }` (Names starting with "A") |
 
 
     5.1 $in: Match Any Value in an Array:

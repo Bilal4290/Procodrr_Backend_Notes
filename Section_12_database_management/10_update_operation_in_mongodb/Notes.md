@@ -68,12 +68,15 @@
 
     MongoDB provides operators to update documents efficiently.
 
-    Operator	Description	                            Example
-    $set	    Updates specific fields	                { $set: { age: 25 } }
-    $unset	    Removes a field	                        { $unset: { age: "" } }
-    $inc	    Increases/decreases a number	        { $inc: { salary: 500 } }
-    $mul	    Multiplies a number	                    { $mul: { price: 1.1 } }
-    $rename	    Renames a field	                        { $rename: { "oldField": "newField" } }
+
+| Operator | Description                      | Example |
+|----------|----------------------------------|---------|
+| $set     | Updates specific fields         | `{ $set: { age: 25 } }` |
+| $unset   | Removes a field                 | `{ $unset: { age: "" } }` |
+| $inc     | Increases/decreases a number    | `{ $inc: { salary: 500 } }` |
+| $mul     | Multiplies a number             | `{ $mul: { price: 1.1 } }` |
+| $rename  | Renames a field                 | `{ $rename: { "oldField": "newField" } }` |
+
 
 
     ✅ $inc - Incrementing a Field:
@@ -113,12 +116,15 @@
 
     Updating arrays requires special update operators like $push, $pop, $pull, $addToSet, and $each.
 
-    Operator	    Description	                                Example
-    $push	        Add an element to an array	                { $push: { hobbies: "Swimming" } }
-    $addToSet	    Add unique element (no duplicates)	        { $addToSet: { hobbies: "Swimming" } }
-    $pop	        Remove first (-1) or last (1) element	    { $pop: { hobbies: -1 } }
-    $pull	        Remove specific value from array	        { $pull: { hobbies: "Reading" } }
-    $each	        Add multiple elements	                    { $push: { hobbies: { $each: ["Coding", "Music"] } } }
+
+| Operator   | Description                           | Example |
+|------------|---------------------------------------|---------|
+| $push      | Add an element to an array           | `{ $push: { hobbies: "Swimming" } }` |
+| $addToSet  | Add unique element (no duplicates)   | `{ $addToSet: { hobbies: "Swimming" } }` |
+| $pop       | Remove first (-1) or last (1) element | `{ $pop: { hobbies: -1 } }` |
+| $pull      | Remove specific value from array     | `{ $pull: { hobbies: "Reading" } }` |
+| $each      | Add multiple elements                | `{ $push: { hobbies: { $each: ["Coding", "Music"] } } }` |
+
 
 
     ✅ $push - Add an Element to an Array:
@@ -164,16 +170,17 @@
 
 6️⃣ Summary
 
-    Method	            What it Does?
-    updateOne()	        Updates only the first matching document.
-    updateMany()	    Updates all matching documents.
-    replaceOne()	    Replaces the entire document (except _id).
-    Upsert	            Inserts a new document if no match is found.
-    $set	            Updates specific fields.
-    $unset	            Removes a field.
-    $inc	            Increments a number field.
-    $rename	            Renames a field.
-    $push	            Adds an item to an array.
-    $addToSet	        Adds unique items to an array.
-    $pull	            Removes specific values from an array.
-    $pop	            Removes first or last element from an array.
+| Method       | What it Does?                                      |
+|-------------|---------------------------------------------------|
+| updateOne()  | Updates only the first matching document.        |
+| updateMany() | Updates all matching documents.                  |
+| replaceOne() | Replaces the entire document (except _id).       |
+| Upsert       | Inserts a new document if no match is found.     |
+| $set         | Updates specific fields.                         |
+| $unset       | Removes a field.                                 |
+| $inc         | Increments a number field.                      |
+| $rename      | Renames a field.                                 |
+| $push        | Adds an item to an array.                        |
+| $addToSet    | Adds unique items to an array.                   |
+| $pull        | Removes specific values from an array.           |
+| $pop         | Removes first or last element from an array.     |

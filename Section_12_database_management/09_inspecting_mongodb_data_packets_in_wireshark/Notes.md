@@ -196,14 +196,17 @@ Step 7: Connection Closure or Persistence:
 
 Final Summary: Complete Request-Response Flow:
 
-    Step	                            Description
-    1️⃣ TCP Handshake	                Client and server establish a connection using TCP (SYN → SYN-ACK → ACK).
-    2️⃣ Authentication	                If enabled, client sends credentials and server verifies them.
-    3️⃣ Client Metadata	Client          shares OS, driver version, app name, etc.
-    4️⃣ Heartbeat Monitoring	        Every 4-5 seconds, the client sends a heartbeat to check connection.
-    5️⃣ Query Execution	                Query is optimized, indexed, and executed in RAM/disk.
-    6️⃣ Server Response	                MongoDB streams the result back over TCP.
-    7️⃣ Connection Management	        Connection remains open unless the client disconnects.
+
+| Step                     | Description                                                 |
+|--------------------------|-------------------------------------------------------------|
+| 1️⃣ TCP Handshake       | Client and server establish a connection using TCP (SYN → SYN-ACK → ACK). |
+| 2️⃣ Authentication      | If enabled, client sends credentials and server verifies them. |
+| 3️⃣ Client Metadata     | Client shares OS, driver version, app name, etc. |
+| 4️⃣ Heartbeat Monitoring | Every 4-5 seconds, the client sends a heartbeat to check connection. |
+| 5️⃣ Query Execution     | Query is optimized, indexed, and executed in RAM/disk. |
+| 6️⃣ Server Response     | MongoDB streams the result back over TCP. |
+| 7️⃣ Connection Management | Connection remains open unless the client disconnects. |
+
 
 
 🔥 Key Takeaways:
@@ -212,3 +215,149 @@ Final Summary: Complete Request-Response Flow:
     ✅ Queries are optimized and executed before fetching results.
     ✅ Clients send heartbeat requests every 4-5 seconds to detect failures.
     ✅ MongoDB Shell is synchronous, but drivers like Node.js are asynchronous.
+
+
+
+
+1️⃣ SCRAM (Salted Challenge Response Authentication Mechanism):
+
+    🔹 Full Form: Salted Challenge Response Authentication Mechanism
+
+    🔹 What It Is:
+
+        The default authentication method in MongoDB.
+
+        Uses password hashing and salting to securely verify credentials.
+
+        Prevents password exposure even if an attacker intercepts communication.
+
+    🔹 How It Works:
+
+        The client sends a username.
+
+        The server responds with a challenge (random salt + stored hash).
+
+        The client hashes the password with the salt and sends it back.
+
+        The server verifies the response without needing the plain password.
+
+
+    2️⃣ X.509 Certificates:
+
+        🔹 Full Form: X.509 Public Key Infrastructure Standard
+
+        🔹 What It Is:
+
+            A widely used digital certificate format.
+
+            Used for TLS/SSL encryption and mutual authentication in MongoDB.
+
+            Helps establish a secure, encrypted connection between clients and servers.
+
+        🔹 How It Works:
+
+            The server presents an X.509 certificate (issued by a trusted authority).
+
+            The client verifies the certificate to ensure it is talking to the right server.
+
+            If mutual authentication is used, the client also provides an X.509 client certificate.
+
+            Once verified, encrypted communication begins.
+
+
+    3️⃣ TLS (Transport Layer Security):
+
+        🔹 Full Form: Transport Layer Security
+
+        🔹 What It Is:
+
+            A security protocol used for encrypting data between a client and a server.
+
+            Successor to SSL (more secure than SSL).
+
+            Used in HTTPS, email security, and database encryption (e.g., MongoDB).
+
+        🔹 How It Works:
+
+            The server and client perform a TLS handshake to establish encryption.
+
+            Secure keys are exchanged, ensuring data integrity and confidentiality.
+
+            The encrypted communication channel is used for data transmission.
+
+
+    4️⃣ SSL (Secure Sockets Layer):
+
+        🔹 Full Form: Secure Sockets Layer
+
+        🔹 What It Is:
+
+            The predecessor of TLS (older encryption protocol).
+
+            Used to secure HTTP (HTTPS), emails, and databases.
+
+            SSL 3.0 had vulnerabilities, so TLS replaced SSL.
+
+        🔹 How It Works:
+
+            Works similarly to TLS but is now considered obsolete due to security flaws.
+
+            TLS 1.2 and TLS 1.3 are the recommended secure versions.
+
+
+    5️⃣ LDAP (Lightweight Directory Access Protocol):
+
+        🔹 Full Form: Lightweight Directory Access Protocol
+
+        🔹 What It Is:
+
+            A protocol for accessing directory services (e.g., Active Directory).
+
+            Stores user credentials in a centralized directory (e.g., corporate networks).
+
+            MongoDB can integrate with LDAP for authentication instead of local users.
+
+        🔹 How It Works:
+
+            User tries to log in to MongoDB.
+
+            MongoDB forwards the authentication request to the LDAP server.
+
+            The LDAP server verifies the username and password.
+
+            If valid, MongoDB allows access.
+
+        🔹 Use Cases:
+
+            Large enterprises managing thousands of users centrally.
+
+            Single Sign-On (SSO) implementations.
+
+
+    6️⃣ Kerberos:
+
+        🔹 Full Form: Network Authentication Protocol Developed at MIT
+
+        🔹 What It Is:
+
+            A ticket-based authentication system used in secure networks.
+
+            Users and services authenticate without sending passwords over the network.
+
+            Used in Windows Active Directory, UNIX, and large organizations.
+
+        🔹 How It Works:
+
+            The user logs in and requests authentication from the Kerberos Key Distribution Center (KDC).
+
+            The KDC issues a Ticket Granting Ticket (TGT).
+
+            The TGT is used to request access to services (e.g., MongoDB).
+
+            The server verifies the ticket and grants access.
+
+        🔹 Benefits:
+
+            Prevents password theft (since no plaintext passwords are sent).
+
+            Supports Single Sign-On (SSO) across multiple services.

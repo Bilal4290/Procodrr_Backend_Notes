@@ -56,10 +56,10 @@ ISAM (Indexed Sequential Access Method) is a file organization method used for m
 
       ✅ Databases solve these problems by offering:
 
-      Fast searches (Indexes)
-      Data relationships (Tables, Collections)
-      Multi-user support
-      Security & backup
+         Fast searches (Indexes)
+         Data relationships (Tables, Collections)
+         Multi-user support
+         Security & backup
 
 
 
@@ -135,7 +135,8 @@ ISAM (Indexed Sequential Access Method) is a file organization method used for m
 
 5️⃣ What is TCP/IP and What is a Protocol?
 
-      TCP (Transmission Control Protocol): Ensures reliable communication between client & server.
+      TCP (Transmission Control Protocol): 
+      Ensures reliable communication between client & server.
       Protocol: A set of rules for communication.
       ✅ Example (How TCP Works in MongoDB):
 
@@ -150,13 +151,14 @@ ISAM (Indexed Sequential Access Method) is a file organization method used for m
 
       When you install MongoDB, you install two things:
 
-      MongoDB Server (Stores data, runs on port 27017).
-      MongoDB Client (Mongo Shell) (Used to send queries to the server).
+         MongoDB Server (Stores data, runs on port 27017).
+         MongoDB Client (Mongo Shell) (Used to send queries to the server).
+
       ✅ MongoDB Architecture
 
-      MongoDB Server: Handles data storage.
-      Mongo Shell (Client): Sends commands.
-      Drivers (For Programming Languages): Allows Node.js, Python, etc., to connect.
+         MongoDB Server: Handles data storage.
+         Mongo Shell (Client): Sends commands.
+         Drivers (For Programming Languages): Allows Node.js, Python, etc., to connect.
 
 
 

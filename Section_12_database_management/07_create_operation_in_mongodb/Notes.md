@@ -61,16 +61,17 @@
 
 2️⃣ NoSQL vs SQL (Pros & Cons):
 
-    Feature	          NoSQL (MongoDB) ✅	                         SQL (MySQL, PostgreSQL) ❌
-    Data Format	      Documents (JSON/BSON)	                      Tables (Rows & Columns)
-    Storage	          Takes more space (due to duplication)	      Less space (normalized data)
-    Read Speed	      Faster (entire document is retrieved)	      Slower (joins needed to reconstruct objects)
-    Write Speed	      Faster (no schema constraints)	          Slower (more checks & constraints)
-    Joins	          ❌ No joins (data duplication instead)	     ✅ Supports joins (normalized structure)
-    Flexibility	      ✅ Schema-less (any structure)	             ❌ Rigid schema (fixed structure)
-    Scaling	          ✅ Horizontal Scaling (easier to scale)	 ❌ Vertical Scaling (harder to scale)
-    Transactions	  ❌ Weak ACID compliance	                 ✅ Strong ACID compliance
-    Use Cases	      Big Data, Real-time apps, Scalability	      Banking, ERP, Complex relationships
+  | Feature          | NoSQL (MongoDB) ✅                        | SQL (MySQL, PostgreSQL) ❌          |
+|-----------------|----------------------------------------|----------------------------------|
+| Data Format     | Documents (JSON/BSON)                 | Tables (Rows & Columns)        |
+| Storage        | Takes more space (due to duplication)  | Less space (normalized data)   |
+| Read Speed      | Faster (entire document is retrieved) | Slower (joins needed to reconstruct objects) |
+| Write Speed     | Faster (no schema constraints)        | Slower (more checks & constraints) |
+| Joins          | ❌ No joins (data duplication instead) | ✅ Supports joins (normalized structure) |
+| Flexibility    | ✅ Schema-less (any structure)         | ❌ Rigid schema (fixed structure) |
+| Scaling        | ✅ Horizontal Scaling (easier to scale) | ❌ Vertical Scaling (harder to scale) |
+| Transactions   | ❌ Weak ACID compliance                 | ✅ Strong ACID compliance |
+| Use Cases      | Big Data, Real-time apps, Scalability  | Banking, ERP, Complex relationships |
 
 
 🔹 Summary
